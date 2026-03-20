@@ -27,9 +27,9 @@ export default function HeroSection() {
             className="flex-shrink-0"
           >
             {/* Dekorasi Bingkai/Glow di belakang foto */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             
-            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-2xl glass border-2 border-white/10">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full glass border-2 border-white/10">
               <img 
                 src="d:\NASYWA\Nasywa Pic.jpeg" // Ganti dengan path foto kamu
                 alt="nasywa azka"
