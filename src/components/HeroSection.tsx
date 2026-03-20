@@ -31,7 +31,7 @@ export default function HeroSection() {
             
             <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-2 border-white/20">
               <img 
-                src="coding/public/Nasywa Pic.jpeg" // Ganti dengan path foto kamu
+                src="public/Nasywa Pic.jpeg" // Ganti dengan path foto kamu
                 alt="nasywa azka"
                 className="w-full h-full object-cover rounded-full duration-500 group-hover:scale-110"
               />
