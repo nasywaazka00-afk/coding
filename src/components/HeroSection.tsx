@@ -23,16 +23,16 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative group"
+            transition={{ duration: 0.8}}
+            className="flex-shrink-0"
           >
             {/* Dekorasi Bingkai/Glow di belakang foto */}
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             
             <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-2xl glass border-2 border-white/10">
               <img 
-                src="/path-ke-foto-kamu.jpg" // Ganti dengan path foto kamu
-                alt="Profile Hero"
+                src="c:\Users\PLN\Downloads\WhatsApp Image 2026-03-20 at 20.39.34.jpeg" // Ganti dengan path foto kamu
+                alt="nasywa azka"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
