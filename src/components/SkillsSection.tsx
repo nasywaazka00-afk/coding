@@ -1,4 +1,4 @@
-import { motion } from 'frame-motion';
+import { motion } from 'framer-motion';
 
 const skills = {
   atletik: [
