@@ -117,17 +117,19 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="flex items-center lg:justify-start justify-center gap-6"
+              className="flex items-center justify-center lg:justify-start gap-6"
             >
               {[
-                { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Youtube, href: '#', label: 'YouTube' },
-                { icon: Instagram, href: '#', label: 'Instagram' },
-              ].map((social) => (
+                { icon: Github, href: 'https://github.com/nasywaazka00-afk/coding', label: 'GitHub' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/nasywa-azka-00-afk', label: 'LinkedIn' },
+                { icon: Youtube, href: 'https://www.youtube.com/', label: 'YouTube' },
+                { icon: Instagram, href: 'https://www.instagram.com/nsywazka_n/?hl=en', label: 'Instagram' },
+              ].map((social, index) => (
                 <motion.a
-                  key={social.label}
+                  key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 rounded-full glass hover:shadow-glow transition-all duration-300"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
