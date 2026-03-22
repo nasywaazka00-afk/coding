@@ -68,7 +68,7 @@ export default function SkillsSection() {
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* atletik */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -81,10 +81,10 @@ export default function SkillsSection() {
               <div className="p-3 rounded-xl bg-primary/10">
                 <span className="text-2xl">🎨</span>
               </div>
-              <h3 className="font-display text-xl font-bold">frontend</h3>
+              <h3 className="font-display text-xl font-bold">atletik</h3>
             </div>
             <div className="space-y-4">
-              {skills.frontend.map((skill, index) => (
+              {skills.atletik.map((skill, index) => (
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>
@@ -123,10 +123,10 @@ export default function SkillsSection() {
               <div className="p-3 rounded-xl bg-primary/10">
                 <span className="text-2xl">🛠️</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Tools &amp; Lainnya</h3>
+              <h3 className="font-display text-xl font-bold">Soft Skill</h3>
             </div>
             <div className="space-y-4">
-              {skills.soft skill.map((skill, index) => (
+              {skills.soft_skill.map((skill, index) => (
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>
