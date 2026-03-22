@@ -31,8 +31,8 @@ export default function HeroSection() {
             {/* Container Bulat untuk Foto */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-2 border-white/20 shadow-2xl">
               <img
-                src="https://freeimage.host/i/qSHJD4p" 
-                alt="nasywa azka"
+                src="Nasywa Pic.jpg" 
+                alt="Nasywa Azka"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
