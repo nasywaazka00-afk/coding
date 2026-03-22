@@ -30,10 +30,10 @@ export default function HeroSection() {
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur opacity-25 group-hover:opacity-100 transition duration-1000"></div>
             
             <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-2 border-white/20">
-              <img src="d:\CODING\coding\public\Nasywa Pic.jpeg" // Ganti dengan path foto kamu
+              <img>
+              </img> src="public/Nasywa Pic.jpeg" // Ganti dengan path foto kamu
                 alt="nasywa azka"
                 className="w-full h-full object-cover rounded-full duration-500 group-hover:scale-110"
-              />
             </div>
 
             {/* Floating Badge (Opsional untuk estetika) */}
