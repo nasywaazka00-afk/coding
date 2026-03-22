@@ -4,9 +4,7 @@ import { Code2, Video, Coffee, Rocket } from 'lucide-react';
 export default function AboutSection() {
   const stats = [
     { icon: Code2, value: '50+', label: 'Projects Selesai' },
-    { icon: Video, value: '100+', label: 'Video Konten' },
     { icon: Coffee, value: '1000+', label: 'Cangkir Kopi' },
-    { icon: Rocket, value: '5+', label: 'Tahun Pengalaman' },
   ];
 
   return (
