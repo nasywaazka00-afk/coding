@@ -50,7 +50,7 @@ function SkillBar({ name, level, delay }: { name: string; level: number; delay: 
   );
 }
 
-export default function SkillsSection() {
+export default function SkillsSection(): any {
   return (
     <section id="skills" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
