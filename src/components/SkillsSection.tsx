@@ -63,7 +63,7 @@ export default function SkillsSection() {
         >
           <span className="text-primary font-medium mb-2 block">Keahlian</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Skills &amp; Teknologi
+            Skills 
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -91,7 +91,7 @@ export default function SkillsSection() {
           </motion.div>
 
           {/* Backend */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -109,7 +109,7 @@ export default function SkillsSection() {
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Tools */}
           <motion.div
