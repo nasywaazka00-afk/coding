@@ -77,7 +77,7 @@ export default function SkillsSection() {
             transition={{ duration: 0.6 }}
             className="p-6 glass rounded-2xl shadow-card hover:shadow-card-hover transition-shadow"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-2 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
                 <span className="text-2xl">🎨</span>
               </div>
@@ -119,7 +119,7 @@ export default function SkillsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="p-6 glass rounded-2xl shadow-card hover:shadow-card-hover transition-shadow"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-2 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
                 <span className="text-2xl">🛠️</span>
               </div>
