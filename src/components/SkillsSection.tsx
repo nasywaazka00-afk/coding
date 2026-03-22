@@ -111,7 +111,7 @@ export default function SkillsSection() {
             </div>
           </motion.div> */}
 
-          {/* Tools */}
+          {/* soft skill */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
