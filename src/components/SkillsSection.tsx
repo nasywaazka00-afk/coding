@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 
 const skills = {
-  frontend: [
-    { name: 'React', level: 95 },
-    { name: 'TypeScript', level: 90 },
-    { name: 'Next.js', level: 88 },
-    { name: 'Tailwind CSS', level: 95 },
-    { name: 'Vue.js', level: 75 },
+  atletik: [
+    { name: 'memanah', level: 85 },
+    { name: 'lari', level: 90 },
+    { name: 'badminton', level: 90 },
+    { name: 'berenang', level: 85 },
+
   ],
   backend: [
     { name: 'Node.js', level: 90 },
@@ -15,12 +15,12 @@ const skills = {
     { name: 'MongoDB', level: 82 },
     { name: 'GraphQL', level: 78 },
   ],
-  tools: [
-    { name: 'Git', level: 95 },
-    { name: 'Docker', level: 80 },
-    { name: 'AWS', level: 75 },
-    { name: 'Figma', level: 85 },
-    { name: 'CI/CD', level: 82 },
+  soft skill: [
+    { name: 'mc', level: 95 },
+    { name: 'berpuisi', level: 90 },
+    { name: 'memimpin', level: 80 },
+    { name: 'berpidato', level: 85 },
+
   ],
 };
 
@@ -69,7 +69,7 @@ export default function SkillsSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Frontend */}
+          {/* atletik */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export default function SkillsSection() {
               <div className="p-3 rounded-xl bg-primary/10">
                 <span className="text-2xl">🎨</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Frontend</h3>
+              <h3 className="font-display text-xl font-bold">frontend</h3>
             </div>
             <div className="space-y-4">
               {skills.frontend.map((skill, index) => (
@@ -126,7 +126,7 @@ export default function SkillsSection() {
               <h3 className="font-display text-xl font-bold">Tools &amp; Lainnya</h3>
             </div>
             <div className="space-y-4">
-              {skills.tools.map((skill, index) => (
+              {skills.soft skill.map((skill, index) => (
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>
