@@ -16,27 +16,28 @@ export default function HeroSection() {
       <ThreeScene />
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Mengubah layout menjadi grid 2 kolom pada layar besar */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
           
-          {/* BAGIAN FOTO (Sisi Kiri) */}
+          {/* --- BAGIAN FOTO (Sisi Kiri) --- */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8}}
-            className="relative flex-shrink-0"
+            transition={{ duration: 0.8 }}
+            className="relative flex-shrink-0 group"
           >
-            {/* Dekorasi Bingkai/Glow di belakang foto */}
+            {/* Efek Glow di belakang bulat */}
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur opacity-25 group-hover:opacity-100 transition duration-1000"></div>
             
-            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-2 border-white/20">
-              <img>
-              </img> src="public/Nasywa Pic.jpeg" // Ganti dengan path foto kamu
+            {/* Container Bulat untuk Foto */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-2 border-white/20 shadow-2xl">
+              <img
+                src="https://freeimage.host/i/qSHJD4p" 
                 alt="nasywa azka"
-                className="w-full h-full object-cover rounded-full duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
             </div>
 
-            {/* Floating Badge (Opsional untuk estetika) */}
+            {/* Floating Badge */}
             <motion.div 
               className="absolute -bottom-4 -right-4 glass px-4 py-2 rounded-lg shadow-xl border border-white/20"
               animate={{ y: [0, -10, 0] }}
@@ -46,7 +47,7 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* BAGIAN TEKS (Sisi Kanan) */}
+          {/* --- BAGIAN TEKS (Sisi Kanan) --- */}
           <div className="text-center lg:text-left flex-1">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
