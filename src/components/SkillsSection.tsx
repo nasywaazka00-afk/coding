@@ -126,7 +126,7 @@ export default function SkillsSection(): any {
               <h3 className="font-display text-xl font-bold">Soft Skill</h3>
             </div>
             <div className="space-y-4">
-              {skills.soft_skill.map((skill, index) => (
+              {skills.soft skill.map((skill, index) => (
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>
