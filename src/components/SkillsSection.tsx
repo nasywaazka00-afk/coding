@@ -6,7 +6,6 @@ const skills = {
     { name: 'lari', level: 90 },
     { name: 'badminton', level: 90 },
     { name: 'berenang', level: 85 },
-
   ],
   backend: [
     { name: 'Node.js', level: 90 },
@@ -15,12 +14,12 @@ const skills = {
     { name: 'MongoDB', level: 82 },
     { name: 'GraphQL', level: 78 },
   ],
-  soft skill: [
+  // Perubahan: Gunakan camelCase atau snake_case untuk key objek
+  softSkill: [
     { name: 'mc', level: 95 },
     { name: 'berpuisi', level: 90 },
     { name: 'memimpin', level: 80 },
     { name: 'berpidato', level: 85 },
-
   ],
 };
 
@@ -34,7 +33,7 @@ function SkillBar({ name, level, delay }: { name: string; level: number; delay: 
       className="space-y-2"
     >
       <div className="flex justify-between items-center">
-        <span className="font-medium">{name}</span>
+        <span className="font-medium capitalize">{name}</span>
         <span className="text-sm text-muted-foreground">{level}%</span>
       </div>
       <div className="h-2 bg-muted rounded-full overflow-hidden">
@@ -50,7 +49,7 @@ function SkillBar({ name, level, delay }: { name: string; level: number; delay: 
   );
 }
 
-export default function SkillsSection(): any {
+export default function SkillsSection() {
   return (
     <section id="skills" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -79,9 +78,9 @@ export default function SkillsSection(): any {
           >
             <div className="flex items-center gap-2 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">🎨</span>
+                <span className="text-2xl">🏹</span>
               </div>
-              <h3 className="font-display text-xl font-bold">atletik</h3>
+              <h3 className="font-display text-xl font-bold capitalize">atletik</h3>
             </div>
             <div className="space-y-4">
               {skills.atletik.map((skill, index) => (
@@ -89,27 +88,6 @@ export default function SkillsSection(): any {
               ))}
             </div>
           </motion.div>
-
-          {/* Backend */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="p-6 glass rounded-2xl shadow-card hover:shadow-card-hover transition-shadow"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">⚙️</span>
-              </div>
-              <h3 className="font-display text-xl font-bold">Backend</h3>
-            </div>
-            <div className="space-y-4">
-              {skills.backend.map((skill, index) => (
-                <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
-              ))}
-            </div>
-          </motion.div> */}
 
           {/* soft skill */}
           <motion.div
@@ -121,12 +99,13 @@ export default function SkillsSection(): any {
           >
             <div className="flex items-center gap-2 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">🛠️</span>
+                <span className="text-2xl">🎤</span>
               </div>
               <h3 className="font-display text-xl font-bold">Soft Skill</h3>
             </div>
             <div className="space-y-4">
-              {skills.soft skill.map((skill, index) => (
+              {/* Perbaikan: Memanggil softSkill tanpa spasi */}
+              {skills.softSkill.map((skill, index) => (
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>
