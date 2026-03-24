@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import HeroSection from './components/HeroSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
+import CertificatesSection from './components/CertificatesSection';
 import ContactSection from './components/ContactSection';
 import AboutSection from './components/AboutSection';
 
@@ -53,6 +54,7 @@ export default function App() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <CertificatesSection />
           <ContactSection />
         </div>
 
