@@ -1,89 +1,81 @@
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Video, Coffee, Rocket } from 'lucide-react';
 
 export default function AboutSection() {
+  // Data Stats
   const stats = [
-    { icon: Code2, value: '50+', label: 'Projects Selesai' },
-    { icon: Coffee, value: '1000+', label: 'Cangkir Kopi' },
+    { label: "Tahun Pengalaman", value: "1+" },
+    { label: "Proyek Selesai", value: "10+" },
+    { label: "Desain Canva", value: "50+" },
+    { label: "Kepuasan Klien", value: "100%" },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
-    <section id="about" className="py-20 md:py-32 bg-muted/30">
+    <section id="about" className="py-20 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <span className="text-primary font-medium mb-2 block">Tentang Saya</span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Mengenal Lebih Dekat
-          </h2>
-          <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
+          
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            variants={containerVariants}
+            className="space-y-12"
           >
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden glass shadow-card">
-               <div className="w-full h-full bg-transparent flex items-center justify-center">
-  {/* Isi kontennya tetap di sini */}
-</div>
-                  <span className="text-8xl">👨‍💻</span>
-                </div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 p-4 glass rounded-xl shadow-card">
-                <p className="font-display font-bold text-2xl text-gradient">5+ Tahun</p>
-                <p className="text-sm text-muted-foreground">Pengalaman</p>
-              </div>
+            {/* Judul dan Deskripsi Utama */}
+            <div className="text-center space-y-4">
+              <motion.h2 
+                variants={itemVariants}
+                className="text-3xl md:text-4xl font-bold text-white"
+              >
+                Mengenal Lebih Dekat
+              </motion.h2>
+              <motion.div 
+                variants={itemVariants}
+                className="w-20 h-1 bg-primary mx-auto rounded-full"
+              />
+              <motion.p 
+                variants={itemVariants}
+                className="text-lg text-slate-300 leading-relaxed"
+              >
+                Saya adalah seorang kreatif yang berfokus pada pengembangan web dan desain visual. 
+                Dengan kombinasi keahlian teknis dan estetika, saya membantu mewujudkan ide 
+                menjadi pengalaman digital yang menarik dan fungsional.
+              </motion.p>
             </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
-            <h3 className="font-display text-2xl md:text-3xl font-bold">
-              Passionate Developer &amp; Creator
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Saya adalah siswi MAN 1 Banda Aceh, ini pertama kali nya saya mempelajari hal hal mengenai coding
-              dan saya sangat tertarik untuk terus belajar dan mengembangkan kemampuan saya di bidang ini.
-              Saya selalu bersemangat untuk mengeksplorasi hal-hal baru dalam bidang ini.
-              
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Selain mempelajari coding, saya juga suka bermain badminton dan jogging setiap weekend, 
-              saya juga suka mengisi waktu luang dengan membaca novel dan saya sangat menyukai novel
-              yang ber-genre misteri.
-            </p>
+            {/* Bagian Stats yang tadi diperbaiki */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                  className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm text-center"
                   whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
                 >
-                  <div className="text-2xl font-bold text-primary mb-1">
+                  <div className="text-3xl font-bold text-primary mb-1">
                     {stat.value}
                   </div>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-slate-400 font-medium">
                     {stat.label}
                   </p>
                 </motion.div>
               ))}
             </div>
+
           </motion.div>
         </div>
       </div>
