@@ -33,7 +33,9 @@ export default function AboutSection() {
           >
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden glass shadow-card">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+               <div className="w-full h-full bg-transparent flex items-center justify-center">
+  {/* Isi kontennya tetap di sini */}
+</div>
                   <span className="text-8xl">👨‍💻</span>
                 </div>
               </div>
@@ -65,19 +67,20 @@ export default function AboutSection() {
               saya juga suka mengisi waktu luang dengan membaca novel dan saya sangat menyukai novel
               yang ber-genre misteri.
             </p>
-            <div className="grid grid-cols-2 gap-4 pt-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
               {stats.map((stat, index) => (
                 <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="p-4 glass rounded-xl text-center hover:shadow-card-hover transition-shadow"
+                  key={index}
+                  variants={itemVariants}
+                  className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                  whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
                 >
-                  <stat.icon className="h-6 w-6 text-primary mx-auto mb-2" />
-                  <p className="font-display text-2xl font-bold">{stat.value}</p>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                  <div className="text-2xl font-bold text-primary mb-1">
+                    {stat.value}
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {stat.label}
+                  </p>
                 </motion.div>
               ))}
             </div>
