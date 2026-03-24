@@ -12,7 +12,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
       <ThreeScene />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -70,7 +70,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-display text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              <span className="text-gradient">portofolio nasywa azka</span>
+              <span className="text-gradient">portofolio nasywaazka</span>
             </motion.h1>
 
             <motion.p
