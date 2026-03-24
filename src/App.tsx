@@ -6,6 +6,7 @@ import HeroSection from './components/HeroSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
+import AboutSection from './components/AboutSection';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -49,6 +50,7 @@ export default function App() {
       <div className="relative z-10">
         <HeroSection />
         <div className="space-y-0">
+          <AboutSection />
           <SkillsSection />
           <ProjectsSection />
           <ContactSection />
