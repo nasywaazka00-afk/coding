@@ -1,61 +1,59 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Play } from 'lucide-react';
+import { ExternalLink, Github, Play, Palette, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Platform e-commerce modern dengan fitur lengkap termasuk payment gateway, inventory management, dan analytics dashboard.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    image: '🛒',
+    title: 'Personal Portfolio Web',
+    description: 'Website portofolio interaktif yang dibangun dengan React dan Framer Motion untuk menampilkan karya secara profesional.',
+    tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    image: '🌐',
     color: 'from-blue-500/20 to-cyan-500/20',
-    github: '#',
-    demo: '#',
+    github: '#', // Ganti dengan link githubmu
+    demo: '#',   // Ganti dengan link live websitemu
   },
   {
-    title: 'Learning Management System',
-    description: 'Platform pembelajaran online dengan video streaming, quiz interaktif, dan progress tracking.',
-    tags: ['Next.js', 'TypeScript', 'MongoDB', 'WebRTC'],
-    image: '📚',
+    title: 'Desain Poster Digital Canva',
+    description: 'Koleksi desain poster promosi dan event yang dibuat menggunakan Canva dengan prinsip tipografi dan tata letak yang menarik.',
+    tags: ['Canva', 'Graphic Design', 'Branding'],
+    image: '🎨',
     color: 'from-purple-500/20 to-pink-500/20',
-    github: '#',
-    demo: '#',
-  },
-  {
-    title: 'Social Media Dashboard',
-    description: 'Dashboard analytics untuk social media dengan real-time data visualization dan reporting.',
-    tags: ['React', 'D3.js', 'Firebase', 'Tailwind'],
-    image: '📊',
-    color: 'from-orange-500/20 to-red-500/20',
-    github: '#',
-    demo: '#',
-  },
-  {
-    title: 'AI Content Generator',
-    description: 'Tool untuk generate konten menggunakan AI dengan integrasi berbagai model language.',
-    tags: ['Python', 'FastAPI', 'OpenAI', 'React'],
-    image: '🤖',
-    color: 'from-green-500/20 to-teal-500/20',
-    github: '#',
-    demo: '#',
-  },
-  {
-    title: 'Video Editing Tutorial',
-    description: 'Seri tutorial video editing dengan 100+ episode dan 10k+ subscribers.',
-    tags: ['Premiere Pro', 'After Effects', 'YouTube'],
-    image: '🎬',
-    color: 'from-red-500/20 to-orange-500/20',
     isContent: true,
-    youtube: '#',
+    demo: '#', // Bisa diisi link ke linktree/drive hasil karya
   },
   {
-    title: 'Coding Tips & Tricks',
-    description: 'Konten tips programming dan best practices untuk developer Indonesia.',
-    tags: ['Instagram', 'TikTok', 'YouTube Shorts'],
-    image: '💡',
+    title: 'Redesign UI Landing Page',
+    description: 'Proyek eksplorasi desain antarmuka pengguna (UI) untuk meningkatkan pengalaman user pada website edukasi.',
+    tags: ['Figma', 'UI/UX', 'Web Design'],
+    image: '📱',
+    color: 'from-orange-500/20 to-red-500/20',
+    demo: '#',
+  },
+  {
+    title: 'Social Media Content Kit',
+    description: 'Paket konten Instagram (Feed & Stories) yang dirancang untuk meningkatkan engagement audience secara visual.',
+    tags: ['Canva', 'Social Media', 'Content Creator'],
+    image: '✨',
+    color: 'from-green-500/20 to-teal-500/20',
+    isContent: true,
+    youtube: '#', // Link jika ada video behind the scenes
+  },
+  {
+    title: 'Sistem Informasi Sekolah',
+    description: 'Website manajemen data sekolah sederhana untuk mempermudah administrasi siswa dan guru.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    image: '🏫',
+    color: 'from-red-500/20 to-orange-500/20',
+    github: '#',
+  },
+  {
+    title: 'Creative Presentation Slide',
+    description: 'Desain slide presentasi yang estetik dan informatif untuk keperluan akademis maupun profesional.',
+    tags: ['Canva', 'PPT', 'Visual Storytelling'],
+    image: '📊',
     color: 'from-cyan-500/20 to-blue-500/20',
     isContent: true,
-    youtube: '#',
+    demo: '#',
   },
 ];
 
@@ -72,7 +70,7 @@ export default function ProjectsSection() {
         >
           <span className="text-primary font-medium mb-2 block">Portfolio</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Projects &amp; Karya
+            Projects & Karya Kreatif
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -89,14 +87,16 @@ export default function ProjectsSection() {
             >
               <div className="h-full p-6 glass rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-2">
                 <div className={`aspect-video rounded-xl mb-4 flex items-center justify-center bg-gradient-to-br ${project.color}`}>
-                  <span className="text-6xl">{project.image}</span>
+                  <span className="text-6xl group-hover:scale-110 transition-transform duration-500">
+                    {project.image}
+                  </span>
                 </div>
                 
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     {project.isContent && (
                       <span className="px-2 py-0.5 text-xs rounded-full bg-primary/10 text-primary font-medium">
-                        Content
+                        Creative
                       </span>
                     )}
                     <h3 className="font-display text-lg font-bold group-hover:text-primary transition-colors">
@@ -122,7 +122,7 @@ export default function ProjectsSection() {
                   <div className="flex gap-2 pt-2">
                     {project.github && (
                       <Button variant="outline" size="sm" className="rounded-full" asChild>
-                        <a href={project.github}>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-1" />
                           Code
                         </a>
@@ -130,17 +130,17 @@ export default function ProjectsSection() {
                     )}
                     {project.demo && (
                       <Button size="sm" className="rounded-full" asChild>
-                        <a href={project.demo}>
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-1" />
-                          Demo
+                          Lihat Karya
                         </a>
                       </Button>
                     )}
                     {project.youtube && (
                       <Button size="sm" className="rounded-full" asChild>
-                        <a href={project.youtube}>
+                        <a href={project.youtube} target="_blank" rel="noopener noreferrer">
                           <Play className="h-4 w-4 mr-1" />
-                          Watch
+                          Tonton
                         </a>
                       </Button>
                     )}
