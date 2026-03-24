@@ -52,8 +52,8 @@ export default function AboutSection() {
                 className="text-lg text-slate-300 leading-relaxed"
               >
                 Saya adalah seorang kreatif yang berfokus pada pengembangan web dan desain visual. 
-                Dengan kombinasi keahlian teknis dan estetika, saya membantu mewujudkan ide 
-                menjadi pengalaman digital yang menarik dan fungsional.
+                saya suka mencari tau hal baru dalam dunia coding dan desain, serta mengubah ide-ide kreatif menjadi solusi digital yang menarik.
+                selain mempelajari coding, saya juga suka bermain badminton, jogging, dan mendengar musik.
               </motion.p>
             </div>
 
