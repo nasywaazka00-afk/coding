@@ -12,8 +12,8 @@ const projects = [
     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
     image: '🌐',
     color: 'from-blue-500/20 to-cyan-500/20',
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/nasywaazka00-afk/coding',
+    demo: 'https://coding-beryl-seven.vercel.app/#',
   },
   {
     title: 'Desain Poster Digital Canva',
